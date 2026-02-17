@@ -1,58 +1,60 @@
-# Technical Specification: AI Seed Phrase Finder Protocol
+# AI Seed Phrase Finder: Mnemonic Recovery Protocol
 
-## Abstract
-This document outlines the architectural implementation and mathematical framework of the **AI Seed Phrase Finder** analytical suite. The system is designed for high-throughput recovery of lost Bitcoin assets by optimizing search operations within the $2^{128}$ mnemonic entropy space.
+<p align="center">
+  <img src="img/cropped-Logo.png" alt="AI Seed Phrase Finder Logo" width="200"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Version-2.1.9.0-00ff00?style=for-the-badge&logo=github" alt="Version"/>
+  <img src="https://img.shields.io/badge/Security-TLS%201.3-blue?style=for-the-badge&logo=shield" alt="Security"/>
+  <img src="https://img.shields.io/badge/AI-Neural%20Networks-purple?style=for-the-badge&logo=brain" alt="AI Core"/>
+</p>
 
 ---
+
+## 🚀 Overview
+The **AI Seed Phrase Finder** is an advanced analytical suite designed for high-throughput recovery of lost Bitcoin assets. By utilizing distributed computing and neural network pattern recognition, the system optimizes search operations within the $2^{128}$ mnemonic entropy space (BIP-39).
+
+### 📺 System in Action
+<p align="center">
+  <img src="img/full-demo.jpg" alt="AI Seed Phrase Finder Demo" width="800" style="border-radius: 10px; border: 1px solid #00ddeb;"/>
+</p>
+
+---
+
+## 🛠 Technical Architecture
 
 ### 1. Mathematical Framework
+The core engine reduces the effective search range by identifying PRNG (Pseudo-Random Number Generator) biases and cluster signatures. 
+- **Checksum Validation:** Performs real-time validation, discarding 93.75% of invalid combinations before processing.
+- **Probability Matrix:** $$P(valid) = \frac{1}{2^4} = 6.25\%$$
 
-#### 1.1 Entropy Space Compression
-The core objective is the reduction of the effective search range through identifying PRNG (Pseudo-Random Number Generator) biases. While the theoretical space for a 12-word BIP-39 mnemonic is massive, specific implementation signatures allow for cluster-based analysis.
+### 2. Neural Architecture (LSTM)
+The system employs **Long Short-Term Memory (LSTM)** networks trained on massive entropy distribution datasets, allowing for the prediction of valid word-chains based on cryptographic entropy signatures.
 
-#### 1.2 Checksum Validation Efficiency
-Standard BIP-39 protocols discard approximately 93.75% of generated combinations due to checksum failure. Our implementation utilizes low-level bit manipulation to perform validation during the generation phase, preventing redundant processing of invalid sequences.
-
-$$P(valid) = \frac{1}{2^4} = 6.25\%$$
-
----
-
-### 2. Neural Architecture
-
-#### 2.1 Pattern Recognition (LSTM)
-The system employs **Long Short-Term Memory (LSTM)** networks trained on entropy distribution datasets. This allows for prediction of valid word-chains by identifying patterns in cryptographic entropy generation.
-
-#### 2.2 Genetic Optimization
-Search parameters are refined using a directed genetic algorithm:
-- **Selection:** High-performance markers are identified in the UTXO set.
-- **Mutation:** Bit-mask manipulation of entropy seeds to explore adjacent data clusters.
+### 3. Infrastructure
+- **HPC Integration:** Native support for remote High-Performance Computing clusters.
+- **Hardware Optimization:** CUDA-accelerated processing for NVIDIA H100/A100 Tensor Cores.
+- **Bloom Filters:** VRAM-resident probabilistic data structures for ultra-fast matching against the UTXO set (60M+ addresses).
 
 ---
 
-### 3. Infrastructure and SaaS Model
+## 📂 Documentation & Guides
+Detailed technical documentation is available for deep-dive analysis:
 
-#### 3.1 HPC Integration
-Computational offloading is achieved via direct integration with remote **High-Performance Computing (HPC)** clusters.
-- **Hardware:** NVIDIA DGX / H100 Tensor Core optimization.
-- **Throughput:** ~1.5 - 2.0 Thash/s (Total combined cluster power).
-
-#### 3.2 Verification via Bloom Filters
-To maintain high-speed matching without blockchain API bottlenecks, we utilize probabilistic data structures.
-- **Bitmap Density:** 120-150 MB VRAM-resident Bloom Filters.
-- **False Positive Mitigation:** Multi-stage atomic verification against a local UTXO RAM cache (60M+ addresses).
+| Document | Description |
+| :--- | :--- |
+| [🧠 Algorithms](./ALGORITHMS.md) | Deep dive into LSTM and Genetic patterns. |
+| [🏗 Infrastructure](./INFRASTRUCTURE.md) | Cluster setup and HPC integration specs. |
+| [🔐 Security](./SECURITY.md) | TLS 1.3, HWID protection, and encryption protocols. |
 
 ---
 
-### 4. Security Protocols
+## 🌐 Official Resources
+- **Main Website:** [ai-seedfinder.com](https://ai-seedfinder.com/)
+- **Live Updates:** [Telegram Channel](https://t.me/ai_seed_finder)
 
-- **Isolation:** End-to-end encryption via TLS 1.3.
-- **Authorization:** HWID-locked license handshakes to prevent unauthorized cluster access.
-- **Output:** Encrypted log synchronization with client-side decryption.
+> **Legal Disclaimer:** This software is intended for data recovery and educational purposes only. Users must comply with local regulations regarding cryptographic research and asset recovery.
 
 ---
-**Core Documentation:**
-- [Algorithm Methodology](./ALGORITHMS.md)
-- [Infrastructure Specs](./INFRASTRUCTURE.md)
-- [Security Protocols](./SECURITY.md)
-
-**Project Web:** [ai-seedfinder.com](https://ai-seedfinder.com/)
+© 2023 - 2025 AI Seed Phrase Finder Project. All Rights Reserved.
