@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bitresurrector.github.io/ai-seed-phrase-finder/sitemap.xml
